@@ -1,0 +1,15 @@
+.products {
+ padding: 5rem 0;
+}
+
+.products h2 {
+ text-align: center;
+ font-size: 2.5rem;
+ margin-bottom: 3rem;
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 2rem;
+}

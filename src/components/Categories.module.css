@@ -34,3 +34,9 @@
  transform: translateY(-6px);
  border-color: #8b4513;
 }
+
+.card p {
+ margin-top: 12px;
+ color: #999;
+ line-height: 1.6;
+}
