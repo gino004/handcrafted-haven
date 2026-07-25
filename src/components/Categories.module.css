@@ -1,0 +1,36 @@
+.categories {
+ margin-top: 100px;
+}
+
+.categories h2 {
+ text-align: center;
+ margin-bottom: 40px;
+ font-size: 2rem;
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 30px;
+}
+
+.card {
+ padding: 40px;
+ border: 1px solid #444;
+ border-radius: 12px;
+ text-align: center;
+ transition: 0.3s;
+}
+
+.card span {
+ font-size: 3rem;
+}
+
+.card h3 {
+ margin-top: 20px;
+}
+
+.card:hover {
+ transform: translateY(-6px);
+ border-color: #8b4513;
+}
