@@ -40,3 +40,19 @@
  color: #999;
  line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+
+ .grid {
+  grid-template-columns: 1fr;
+ }
+
+ .categories h2 {
+  font-size: 2rem;
+ }
+
+ .card {
+  padding: 30px;
+ }
+
+}

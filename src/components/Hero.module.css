@@ -56,3 +56,39 @@
  height: auto;
  border-radius: 16px;
 }
+
+@media (max-width: 768px) {
+
+ .hero {
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+ }
+
+ .content h1 {
+  font-size: 2.5rem;
+ }
+
+ .content p {
+  font-size: 1.1rem;
+ }
+
+ .buttons {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .buttons button {
+  width: 100%;
+  max-width: 280px;
+ }
+
+ .imageContainer {
+  width: 100%;
+ }
+
+ .imageContainer img {
+  width: 100%;
+  height: auto;
+ }
+}
