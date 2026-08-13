@@ -21,3 +21,50 @@
  }
 
 }
+
+.search {
+ width: 100%;
+ max-width: 500px;
+ display: block;
+ margin: 0 auto 30px;
+ padding: 14px 18px;
+
+ background-color: #171717;
+ color: white;
+
+ border: 1px solid #444;
+ border-radius: 10px;
+
+ font-size: 1rem;
+ outline: none;
+}
+
+.search:focus {
+ border-color: #c66a12;
+}
+
+.noResults {
+ text-align: center;
+ color: #aaa;
+ font-size: 1.1rem;
+ margin-top: 20px;
+}
+.filter {
+ padding: 12px 16px;
+ background-color: #1a1a1a;
+ color: #f5f5f5;
+ border: 1px solid #c66a12;
+ border-radius: 8px;
+ font-size: 1rem;
+ cursor: pointer;
+ outline: none;
+ margin-bottom: 30px;
+}
+
+.filter:hover {
+ border-color: #e07b1a;
+}
+
+.filter:focus {
+ box-shadow: 0 0 0 2px rgba(198, 106, 18, 0.2);
+}

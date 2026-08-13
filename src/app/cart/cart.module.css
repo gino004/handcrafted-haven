@@ -1,0 +1,149 @@
+.container {
+ min-height: 100vh;
+ background-color: #0b0b0b;
+ padding: 60px 20px;
+ color: white;
+}
+
+.content {
+ max-width: 900px;
+ margin: 0 auto;
+}
+
+.title {
+ text-align: center;
+ font-size: 3rem;
+ margin-bottom: 40px;
+}
+
+.items {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.item {
+ background-color: #171717;
+ border: 1px solid #444;
+ border-radius: 12px;
+ padding: 25px 30px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.item h2 {
+ margin: 0 0 8px;
+ font-size: 1.4rem;
+}
+
+.item p {
+ margin: 0;
+ color: #c66a12;
+ font-size: 1.2rem;
+ font-weight: bold;
+}
+
+.empty {
+ text-align: center;
+ color: #aaa;
+ font-size: 1.2rem;
+}
+
+.link {
+ display: inline-block;
+ margin-top: 25px;
+ color: #c66a12;
+ text-decoration: none;
+}
+
+.link:hover {
+ color: #a9550d;
+}
+
+@media (max-width: 768px) {
+ .container {
+  padding: 40px 20px;
+ }
+
+ .title {
+  font-size: 2.2rem;
+ }
+
+ .item {
+  padding: 20px;
+ }
+}
+
+.total {
+ margin-top: 30px;
+ padding: 25px;
+ background-color: #171717;
+ border: 1px solid #444;
+ border-radius: 12px;
+ text-align: right;
+}
+
+.total h2 {
+ margin: 0;
+ color: #c66a12;
+}
+
+.removeButton {
+ padding: 10px 18px;
+ background-color: transparent;
+ color: #c66a12;
+ border: 1px solid #c66a12;
+ border-radius: 8px;
+ font-size: 0.95rem;
+ font-weight: bold;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+.removeButton:hover {
+ background-color: #c66a12;
+ color: white;
+}
+
+.cartActions {
+ margin-top: 30px;
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+}
+
+.clearButton {
+ padding: 12px 20px;
+ background-color: transparent;
+ color: #aaa;
+ border: 1px solid #555;
+ border-radius: 8px;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+.clearButton:hover {
+ border-color: #c66a12;
+ color: #c66a12;
+}
+
+.checkoutButton {
+ display: block;
+ width: 100%;
+ padding: 15px 20px;
+ background-color: #c66a12;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ border-radius: 8px;
+ font-size: 1.1rem;
+ font-weight: bold;
+ transition: 0.3s;
+}
+
+.checkoutButton:hover {
+ background-color: #a9550d;
+ transform: translateY(-2px);
+}

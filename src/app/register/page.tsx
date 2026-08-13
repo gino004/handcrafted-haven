@@ -1,51 +1,57 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./login.module.css";
+import styles from "./register.module.css";
 
-export default function LoginPage() {
+export default function RegisterPage() {
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [message, setMessage] = useState("");
-	const [isSuccess, setIsSuccess] = useState(false);
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 
+		if (name.trim() === "") {
+			setMessage("Please enter your name.");
+			return;
+		}
+
 		if (email.trim() === "") {
-			setIsSuccess(false);
 			setMessage("Please enter your email.");
 			return;
 		}
 
 		if (!email.includes("@")) {
-			setIsSuccess(false);
 			setMessage("Please enter a valid email.");
 			return;
 		}
 
 		if (password.trim() === "") {
-			setIsSuccess(false);
 			setMessage("Please enter your password.");
 			return;
 		}
 
 		if (password.length < 6) {
-			setIsSuccess(false);
 			setMessage("Password must be at least 6 characters.");
 			return;
 		}
-		setIsSuccess(true);
-		setMessage("Login successful!");
+
+		setMessage("Account created successfully!");
 	};
 
 	return (
 		<div className={styles.container}>
 			<div className={styles.card}>
 				<h1>Handcrafted Haven</h1>
-				<h2>Welcome Back</h2>
+				<h2>Create Account</h2>
 
 				<form className={styles.form} onSubmit={handleSubmit}>
+					<div className={styles.inputGroup}>
+						<label htmlFor="name">Name</label>
+						<input type="text" id="name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
+					</div>
+
 					<div className={styles.inputGroup}>
 						<label htmlFor="email">Email</label>
 						<input type="email" id="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -55,17 +61,12 @@ export default function LoginPage() {
 						<label htmlFor="password">Password</label>
 						<input type="password" id="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
 					</div>
-
-					<button type="submit">Sign In</button>
-					{message && (
-						<p className={isSuccess ? styles.success : styles.error}>
-							{message}
-						</p>
-					)}
+					<button type="submit">Create Account</button>
+					{message && (<p className={styles.message}>{message}</p>)}
 				</form>
 
 				<p className={styles.footer}>
-					Don't have an account? <a href="/register">Create Account</a>
+					Already have an account? <a href="/login">Sign In</a>
 				</p>
 			</div>
 		</div>

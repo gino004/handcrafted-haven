@@ -1,0 +1,114 @@
+.container {
+ min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #0b0b0b;
+ padding: 40px 20px;
+}
+
+.card {
+ width: 100%;
+ max-width: 600px;
+ background-color: #171717;
+ border: 1px solid #444;
+ border-radius: 24px;
+ padding: 60px;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card h1 {
+ text-align: center;
+ font-size: 3rem;
+ margin-bottom: 10px;
+}
+
+.card h2 {
+ text-align: center;
+ color: #c66a12;
+ font-weight: normal;
+ margin-bottom: 50px;
+}
+
+.form {
+ display: flex;
+ flex-direction: column;
+ gap: 30px;
+}
+
+.inputGroup {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+.inputGroup label {
+ font-size: 1.2rem;
+}
+
+.inputGroup input {
+ padding: 18px;
+ font-size: 1.1rem;
+ background-color: #222;
+ color: white;
+ border: 1px solid #444;
+ border-radius: 12px;
+ outline: none;
+}
+
+.inputGroup input:focus {
+ border-color: #c66a12;
+}
+
+.form button {
+ padding: 18px;
+ background-color: #c66a12;
+ color: white;
+ border: none;
+ border-radius: 12px;
+ font-size: 1.2rem;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.form button:hover {
+ background-color: #a9550d;
+}
+
+.message {
+ text-align: center;
+ color: #4caf50;
+ font-weight: bold;
+ font-size: 1.1rem;
+}
+
+.footer {
+ text-align: center;
+ margin-top: 35px;
+ color: #aaa;
+ font-size: 1.1rem;
+}
+
+.footer a {
+ color: #c66a12;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.footer a:hover {
+ text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+ .card {
+  padding: 40px 25px;
+ }
+
+ .card h1 {
+  font-size: 2.2rem;
+ }
+
+ .card h2 {
+  font-size: 1.6rem;
+ }
+}

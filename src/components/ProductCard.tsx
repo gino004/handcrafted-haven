@@ -1,11 +1,14 @@
 import styles from "./ProductCard.module.css";
+import Link from "next/link";
 
 type ProductCardProps = {
+	id: string;
 	name: string;
 	price: string;
 };
 
 export default function ProductCard({
+	id,
 	name,
 	price,
 }: ProductCardProps) {
@@ -15,7 +18,9 @@ export default function ProductCard({
 
 			<p>{price}</p>
 
-			<button>View Details</button>
+			<Link href={`/products/${id}`} className={styles.button}>
+				View Details
+			</Link>
 		</div>
 	);
 }
